@@ -741,13 +741,9 @@ based on the subject you are taking.
 ## 5.3. Preloaded data files<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 
 *CheatLogs.jar* contains some example cheat sheet files. They are over to the */data* directory when you run the application for the first time. To differentiate these files from your 
-
 personally created cheat sheets, they are placed under the */preloaded* subdirectory. By viewing and
-
 editing these cheat sheets through **CheatLogs**, you will understand how to operate this program.
-
 The figure below shows a sample organization of the cheat sheet files in a user’s directory with
-
 two preloaded cheat sheets included.
 
 ![image](https://i.ibb.co/bzp4yJ2/preloaded-Illustration.png)
@@ -764,7 +760,7 @@ from the other cheat sheet files. This is to help you better identify preloaded 
 **Q**: How do I transfer my data to another computer? <br>
 **A**: You can simply drag and drop the `cheatlogs.jar`  and the `/data` directory in that same folder into the other computer.
 
-**Q**: Why is CheatLogs so strict on formatting!?<br>
+**Q**: Why is CheatLogs so strict on formatting?<br>
 **A**: CheatLogs is still under development but we plan to provide better ways for you to input ways in the future.
 
 **Q**: Will future updates break my current cheatsheets?<br>
