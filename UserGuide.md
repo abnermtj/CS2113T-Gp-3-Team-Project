@@ -171,57 +171,70 @@ The anatomy of the command is broken down to colour-coded sections in the pictur
 
 <a id="storage-command-type"></a>
 ## 4.1. Storage Commands:  <font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+
 This is one of the most used command type in CheatLogs.
-They allow you to manage the input and output of cheatsheets to and from the entire list of cheatsheets. 
-CheatLogs only has one list of cheatsheets and the following storage commands all refer to this as **the List**.
+The storage commands allow you to manage the input and output of cheat sheets to and from the entire list of cheat sheets. 
+CheatLogs only has one list of cheat sheets and the following storage commands all refer to this as **the List**.
+
 ___
 
 <a id="add-command"></a> 
-### 4.1.1. Adding a cheatsheet: `/add` <font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+
+### 4.1.1. Adding a cheat sheet: `/add` <font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 
 > :exclamation: The subject name would be automatically converted to pascal case, no matter whether your input is in lower or upper case.
 > Example: 
-> * `java` would be converted to `Java`
-> * `PYTHON` would be converted to `Python`
-> * `ruby on rails` would be converted to `RubyOnRails`
+>* `java` would be converted to `Java`
+>* `PYTHON` would be converted to `Python`
+>* `ruby on rails` would be converted to `RubyOnRails`
 
-You can easily use the `/add` command to add your cheatsheets to the list.
-You can use the two available modes for adding the cheatsheet: **easy** and **advanced** mode.
+You can easily use the `/add` command to add your cheat sheets to the list.
+You can use the two available modes for adding the cheat sheet: **easy** and **advanced** mode.
 
 <a id="add-command-easy"></a>
-#### 4.1.1.1. Adding a cheatsheet using the easy mode<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
+
+#### 4.1.1.1. Adding a cheat sheet using the easy mode<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
+
 > Format: `/add`
 
-The first method that you can use to add cheatsheet is the easy mode. Just type `/add` without adding any flag or description. 
-You will be prompted to fill in the `NAME` and the `SUBJECT` of your cheatsheet.
+The first method that you can use to add chea tsheet is the easy mode. Just type `/add` without adding any flag or description. 
+You will be prompted to fill in the `NAME` and the `SUBJECT` of your cheat sheet.
+
 ![image](https://i.ibb.co/n01kQ4Y/carbon.png)
 
 Shortly after, a window will pop up to show the editing window.
-Enter the details of your cheatsheet in the text area shown below:
+Enter the details of your cheat sheet in the text area shown below:
+
 ![image](https://i.ibb.co/hYtY1GM/Screenshot-2020-11-09-at-6-30-12-PM.png)
 
-Once you are done with entering the details, click the `Save` button to save the cheatsheet.
+Once you are done with entering the details, click the `Save` button to save the cheat sheet.
 
 ![image](https://i.ibb.co/n01kQ4Y/carbon.png)
 
-> :bulb: CheatLogs has an autosave feature. When you close the window of the text editor, the cheatsheet will automatically be saved.
+> :bulb: CheatLogs has an autosave feature. When you close the window of the text editor, the cheat sheet will automatically be saved.
 
-Congratulations! You have added your first cheatsheet into CheatLogs.
+Congratulations! You have added your first cheat sheet into CheatLogs!
 
 <a id="add-command-advanced"></a>
-#### 4.1.1.2. Adding a cheatsheet using the advanced mode<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
+
+#### 4.1.1.2. Adding a cheat sheet using the advanced mode<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
+
 >Format: `/add /n <CHEATSHEET_NAME> /s <SUBJECT>` <br>
+
 >Flag optionality: `/n` (required)`/s` (required)
 
-For the more experienced users, you can also add cheatsheets using the advanced mode. 
+For the more experienced users, you can also add cheat sheets using the advanced mode. 
 A cheat sheet is first constructed with the name `CHEATSHEET_NAME` and subject `SUBJECT`. 
-The Editor will then pop up for you to enter the description of the cheatsheet.
+The Editor will then pop up for you to enter the description of the cheat sheet.
+
 ![image](https://i.ibb.co/440k5wv/Screenshot-2020-11-09-at-7-32-00-PM.png)
-If a valid description is saved, the cheatsheet is added to the List and stored to the */data* folder in the jar file directory. The expected outcome should be similar to below.
+
+If you enter a valid description and click the `Save` button, CheatLogs will add the cheat sheet on to the List and stored it inside the */data* folder in the jar file directory. The expected outcome should be similar to below.
 
 ![image](https://i.ibb.co/hV499yH/image.png)
 
-However, if the description is blank, or the Editor was cancelled, the error message below is shown and the cheat sheet is not saved.
+However, if you enter a blank description, then click the `Save` button, an error message below will show up and CheatLogs will not save the cheat sheet.
+
 ![image](https://i.ibb.co/j3STgFF/Screenshot-2020-11-09-at-6-30-28-PM.png)
 
 If you try to enter a cheat sheet with an existing name on the List, you will get a message to input another one as depicted below.
@@ -229,40 +242,48 @@ If you try to enter a cheat sheet with an existing name on the List, you will ge
 ![image](https://i.ibb.co/mhgrwN0/image.png)
 
 Examples:
+
 * `/add /n classes /s Java`
 * `/add /n Cppthings /s JavaisAwesome`
 
 Shortly after, an editing window will pop up to show the editing window.
-Enter the details of your cheatsheet there, then click the `Save` button.
+Enter the details of your cheat sheet there, then click the `Save` button.
 
 If you want to clear the text editing area, click the `Clear All` button
 
-If you decide to cancel adding the cheatsheet, click the `Cancel` button.
-CheatLogs will discard the progress you made in the text editor, and the cheatsheet will not be created.
+If you decide to cancel adding the cheat sheet, click the `Cancel` button.
+
+CheatLogs will discard the progress you made in the text editor, and CheatLogs will not create the cheat sheet.
 
 <a id="delete-command"></a>
- 
-#### 4.1.2. Deleting a cheatsheet: `/delete`<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
-From the previous subsection, we learned how to add a cheatsheet into CheatLogs. 
+
+#### 4.1.2. Deleting a cheat sheet: `/delete`<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+
+From the previous subsection, we learned how to add a cheat sheet into CheatLogs. 
 
 In this section, you will learn how to use the `/delete` function.
-
 You can use the delete command using two modes, **easy** and **advanced** mode.
+
 <a id="delete-command-easy"></a>
-#### 4.1.2.1. Deleting a cheatsheet using the easy mode<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
-The easy mode of the delete command lets you safely delete cheatsheets by prompting you to input the name and the index of the cheatsheet.
+
+#### 4.1.2.1. Deleting a cheat sheet using the easy mode<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
+
+The easy mode of the delete command lets you safely delete cheat sheets by prompting you to input the name and the index of the cheat sheet.
+
 > Format: `/delete`
 
-The prompts on the screen will request you to enter the name and the index of the cheatsheet; as shown in the picture below:
+The prompts on the screen will request you to enter the name and the index of the cheat sheet; as shown in the picture below:
+
 ![image](https://i.ibb.co/12w4jCZ/delete-easy-mode.png)
 
 <a id="delete-command-advanced"></a>
-#### 4.1.2.2. Deleting a cheatsheet using the advanced mode<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
-The advanced mode of the delete command lets you delete a cheatsheet using its index or its name. 
-The delete command will also delete the corresponding cheatsheet from the */data* folder.
 
-To figure out the index of the cheatsheet, you can use the `/list` command.
-The first cheatsheet has an `INDEX` of 1.
+#### 4.1.2.2. Deleting a cheat sheet using the advanced mode<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
+
+The advanced mode of the delete command lets you delete a cheat sheet using its index or its name. 
+The delete command will also delete the corresponding cheat sheet from the */data* folder.
+To figure out the index of the cheat sheet, you can use the `/list` command.
+The first cheat sheet has an `INDEX` of 1.
 
 >Format: `/delete /n CHEATSHEET_NAME /i CHEATSHEET_INDEX` <br>
 >
@@ -271,21 +292,26 @@ The first cheatsheet has an `INDEX` of 1.
 >Format: `/delete /n CHEATSHEET_NAME`<br>
 >Format: `/delete /n CHEATSHEET_INDEX` <br>
 
-This command deletes the matching cheatsheet from **the List** with a name matching `CHEATSHEET_NAME` or index matching `CHEATSHEET_INDEX` whichever you included. The expected result is similar to below if a matching cheatsheet is found.
+This command deletes the matching cheat sheet from **the List** with a name matching `CHEATSHEET_NAME` or index matching `CHEATSHEET_INDEX` whichever you included. The expected result is similar to below if a matching cheat sheet is found.
 
-This example bellow uses only the `CHEATSHEET_NAME` to delete a cheatsheet.
+This example bellow uses only the `CHEATSHEET_NAME` to delete a cheat sheet.
+
 ![image](https://i.ibb.co/vvwTBFb/namedelete.png)
 
-This example bellow uses only the `CHEATSHEET_INDEX` to delete a cheatsheet.
+This example bellow uses only the `CHEATSHEET_INDEX` to delete a cheat sheet.
+
 ![image](https://i.ibb.co/9bPBS09/delete-easy-1.png)
 
 When either the name or index does not match, CheatLogs will specify the error as shown below.
+
 ![image](https://i.ibb.co/WyQMS2v/wrongnameindex.png)
 
 > :bulb: Our program currently does not have any undo functionality.
-> Once you delete a cheatsheet, it will be deleted forever and is not recoverable.
+
+> Once you delete a cheat sheet, it will be deleted forever and is not recoverable.
 
 Examples:
+
 * `/delete /n computer /i 15`
 * `/delete /i 15` 
 * `/delete /n computer`
@@ -293,19 +319,42 @@ Examples:
 ___
 
 <a id="clear-command"></a>
+
+### 4.1.3. Clearing all entries: `/clear`<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+
+>Format: `/clear`
+>
+
+If you want to reset everything to its original state, you can simply use the `/clear` command instead of using `/delete` multiple times.
+This command will delete all cheat sheets from **the List** on your CheatLogs. No need to worry, `/clear` command will not remove the preloaded cheat sheets.
+Here is the expected result if currently, you have two cheat sheets stored in the application.
+
+![image](https://i.ibb.co/ysXp9DY/clearcommand.png)
+
+Example:
+
+* `/clear`
+
+> :exclamation: The clear function only clears for the user made cheat sheets. <br>
+> The preloaded cheat sheet will still appear inside the list.
+___
+
+
+<a id="clear-command"></a>
 ### 4.1.3. Clearing all entries: `/clear`<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 >Format: `/clear`
 >
-If you want to reset everything to its original state, you can simply use the `/clear` command instead of using `/delete` multiple times.
-This command will delete all cheatsheets from **the List** on your CheatLogs. No need to worry, `/clear` command will not remove the preloaded cheatsheets.
-Here is the expected result if currently, you have two cheatsheets stored in the application.
+If you want to reset everything to its original state, you can use the `/clear` command instead of using `/delete` multiple times.
+This command will delete all cheat sheets from **the List** on your CheatLogs. No need to worry, `/clear` command will not remove the preloaded cheat sheets.
+Here is the expected result if currently you have two cheat sheets stored in the application.
+
 ![image](https://i.ibb.co/ysXp9DY/clearcommand.png)
 
 Example:
 * `/clear`
 
-> :exclamation: The clear function only clears for the user made cheatsheets. <br>
-> The preloaded cheatsheet will still appear inside the list.
+> :exclamation: The clear function only clears for the user made cheat sheets. <br>
+> The preloaded cheat sheet will still appear inside the list.
 ___
 
 
