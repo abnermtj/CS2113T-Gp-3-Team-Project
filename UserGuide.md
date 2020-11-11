@@ -629,8 +629,7 @@ If you are done using CheatLogs, simple type `/exit` to close the application. C
 commands to store your cheat sheets for future reference. This ensures that you
 have a directory of organized cheat sheet files that **CheatLogs** can read anytime. 
 
-Refer to the image below for an example of a cheat sheet
-file.
+Refer to the image below for an example of a cheat sheet file.
 
 ![image](https://i.ibb.co/RDjGFYZ/xml-File-Example.png)
 
@@ -639,7 +638,7 @@ file.
 <a id="data-file-contents"></a>
 ## 5.1. Data file contents<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 
-Each cheat sheet file uses an XML file format. This file format organizes the contents
+Each cheat sheet file uses an [XML](https://www.w3schools.com/xml/xml_whatis.asp) file format. This file format organizes the contents
 of the file into different sections based on certain attributes of the cheat sheet. The code
 snippet below illustrates the structure of the entire cheat sheet file.
 
@@ -676,22 +675,23 @@ sections you place inside `main` and creates a cheat sheet based on the input gi
 
 >Format: `<main>CONTENTS</main>` 
 
-> :bulb:  You can rearrange the order of sections within **CONTENTS**. **CheatLogs** does not take the ordering of such sections into account when parsing XML files.
+> :bulb:  You can rearrange the order of sections within `CONTENTS`. **CheatLogs** does not take the ordering of such sections into account when parsing XML files.
 
-> :exclamation: Any section that you do not insert into **CONTENTS** are not included in the cheat sheet.
+> :exclamation: Any section that you do not insert into `CONTENTS` are not included in the cheat sheet.
 
 ---
 
 <a id="favourite"></a>
 ### 5.1.3. Favourite<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 
-This section indicates if CheatLogs should mark the cheat sheet as [favourite](#favourite-command). You can use this to mark cheat sheets which you want to view in your list of favourite cheat sheets.
+This section indicates if CheatLogs should mark the cheat sheet as [favourite](#favourite-command). 
+You can use this to mark cheat sheets which you want to view in your list of favourite cheat sheets.
 
 >Format: `<favourite>STATUS</favourite>`
 
-> :memo:  STATUS is not case-sensitive. For example, `YES` and `yes` are the same.
+> :memo:  `STATUS` is not case-sensitive. For example, `YES` and `yes` are the same.
 
-> :exclamation: If STATUS contains another word than `YES`, the cheat sheet will not be marked as a favourite. 
+> :exclamation: If `STATUS` contains another word than `YES`, the cheat sheet will not be marked as a favourite. 
 
 ---
 
@@ -703,8 +703,8 @@ sheet files by assigning cheat sheets of the same subject to the same folder.
 
 >Format: `<subject>SUBJECT</subject>`
 
-> :exclamation: SUBJECT cannot take in special characters. You will
->  **not** be able to insert XML files with such subjects into **CheatLogs**.
+> :exclamation: `SUBJECT` cannot take in special characters. You will
+>  **not** be able to insert XML files with invalid subject names into **CheatLogs**.
 
 ---
 
@@ -712,7 +712,6 @@ sheet files by assigning cheat sheets of the same subject to the same folder.
 ### 5.1.5. Contents<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 
 This section includes the contents of the cheat sheet. You can type the notes you want to see in your cheatsheet
-
 here.
 
 >Format: `<contents>CONTENTS</contents>`
@@ -723,16 +722,16 @@ here.
 ## 5.2. Data organization<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 
 You can find all the data files in the */data* directory, which is in the same directory as
-*CheatLogs.jar*. Within */data*, **CheatLogs** stores data files in subdirectories whose name matches its subject name. This gives you a directory of cheat sheets organized by subject, which you can use to retrieve any external cheat sheet file. 
+*CheatLogs.jar*. Within */data*, **CheatLogs** stores data files in folders whose name matches its subject name. 
+This gives you a directory of cheat sheets organized by subject, which you can use to retrieve any external cheat sheet file. 
 
 The figure below shows a sample organization of the cheat sheet files in a user’s directory.
 
 ![image](https://i.ibb.co/zbppwZZ/sample-User-Data.png)
 
-In the example illustrated above, the user currently has cheat sheets  of
-3 different subjects. Even though some cheat sheets have the same name such as
-arrays.xml, they are categorized into different folders as they do not share the same
-subject name. 
+In the example illustrated above, the user currently has created cheat sheets  of
+3 different subjects. Having cheat sheets that are stored based on subject allows you
+to conveniently retrieve notes for the programming language that you are seeking help in.
 
 This allows you to create cheat sheets for common concepts which may differ
 based on the subject you are taking.
@@ -740,9 +739,10 @@ based on the subject you are taking.
 <a id="preloaded-data-files"></a>
 ## 5.3. Preloaded data files<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 
-*CheatLogs.jar* contains some example cheat sheet files. They are over to the */data* directory when you run the application for the first time. To differentiate these files from your 
+*CheatLogs.jar* contains some example cheat sheet files. They are transferred over to the */data* directory when you run the application for the first time. To differentiate these files from your 
 personally created cheat sheets, they are placed under the */preloaded* subdirectory. By viewing and
 editing these cheat sheets through **CheatLogs**, you will understand how to operate this program.
+
 The figure below shows a sample organization of the cheat sheet files in a user’s directory with
 two preloaded cheat sheets included.
 
