@@ -98,17 +98,18 @@ CheatLogs is easy to get running. You can follow the steps below to do so.
 
 4.  Create a new directory anywhere on your PC, This is the home folder where CheatLogs will be creating its own subdirectories to store cheat sheets.
 
-> :bulb: Unfamiliar with navigating the terminal? Click [here](https://www.digitaltrends.com/computing/how-to-use-command-prompt/) for a basic introduction for Windows cmd and [here](https://www.pluralsight.com/guides/beginner-linux-navigation-manual) for macOS/Linux bash terminal.
+    > :bulb: Unfamiliar with navigating the terminal? Click [here](https://www.digitaltrends.com/computing/how-to-use-command-prompt/) for a basic introduction for Windows cmd and [here](https://www.pluralsight.com/guides/beginner-linux-navigation-manual) for macOS/Linux bash terminal.
 
 5.  Move _CheatLogs.jar_ to the new directory.
 6.  On the terminal, navigate to the directory.
 
     > :memo: If you are running CheatLogs for the first time, proceed to step 7.1. Otherwise, proceed to step 7.2.
 
-7.        1. Invoke `java -jar cheatlogs.jar first` to run the program. Through this command, CheatLogs will import [preloaded
-    cheat sheet files](#preloaded-data-files) for you to use. 2. Invoke `java -jar cheatlogs.jar` to run the program.
+7.  1. Invoke `java -jar cheatlogs.jar first` to run the program. Through this command, CheatLogs will import [preloaded
+       cheat sheet files](#preloaded-data-files) for you to use.
+    2. Invoke `java -jar cheatlogs.jar` to run the program.
 
-> :exclamation: If a welcome message appears as shown below after running step 7.1 or 7.2, then great! CheatLogs is up and running.
+    > :exclamation: If a welcome message appears as shown below after running step 7.1 or 7.2, then great! CheatLogs is up and running.
 
 ![CheatLogs welcome screen](https://i.ibb.co/L6LmYGZ/mainMenu.png)
 
@@ -121,9 +122,9 @@ CheatLogs is easy to get running. You can follow the steps below to do so.
 
 A bit confused? Here is a video guide on doing steps 4-9 using the terminal (not cmd). Note that CheatLogs.jar already been placed in the Desktop folder.
 
-> :bulb: The commands for Windows cmd and UNIX/MacOS terminal are quite similar. You can achieve the same result with cmd using the exact same commands used in the following video.
+    > :bulb: The commands for Windows cmd and UNIX/MacOS terminal are quite similar. You can achieve the same result with cmd using the exact same commands used in the following video.
 
-> :exclamation: This demonstration follows step 8b instead of step 8a.
+    > :exclamation: This demonstration follows step 8b instead of step 8a.
 
 ![ezgif-6-63beb94eab4e](https://i.ibb.co/Q9FShJt/ezgif-6-63beb94eab4e.gif)
 <br>
