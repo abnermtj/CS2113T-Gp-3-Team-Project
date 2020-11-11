@@ -31,20 +31,20 @@ The table of contents below lets you easily access the documentation for install
 * [3. GUI text editor](#editor)
 * [4. Commands](#commands)
    * [4.1. Storage commands (Aldo)](#storage-command-type)
-   	  * [4.1.1. Adding a cheatsheet: `/add`](#add-command)
-   	    * [4.1.1.1. Adding a cheatsheet using the easy mode](#add-command-easy)
-   	    * [4.1.1.2. Adding a cheatsheet using the advanced mode](#add-command-advanced)
-	  * [4.1.2. Deleting a cheatsheet: `/delete`](#delete-command)
-	    * [4.1.2.1. Deleting a cheatsheet using the easy mode](#delete-command-easy)
-        * [4.1.2.2. Deleting a cheatsheet using the advanced mode](#delete-command-advanced)
+   	  * [4.1.1. Adding a cheat sheet: `/add`](#add-command)
+   	    * [4.1.1.1. Adding a cheat sheet using the easy mode](#add-command-easy)
+   	    * [4.1.1.2. Adding a cheat sheet using the advanced mode](#add-command-advanced)
+	  * [4.1.2. Deleting a cheat sheet: `/delete`](#delete-command)
+	    * [4.1.2.1. Deleting a cheat sheet using the easy mode](#delete-command-easy)
+        * [4.1.2.2. Deleting a cheat sheet using the advanced mode](#delete-command-advanced)
 	  * [4.1.3. Clearing all entries: `/clear`](#clear-command)
   * [4.2.  Manipulation commands (Abner)](#manipulation-command-type)
-	  * [4.2.1. Editing a cheatsheet: `/edit` ](#edit-command)
-	  * [4.2.2. Favouriting a cheatsheet: `/fav` ](#favourite-command)
+	  * [4.2.1. Editing a cheat sheet: `/edit` ](#edit-command)
+	  * [4.2.2. Favouriting a cheat sheet: `/fav` ](#favourite-command)
   * [4.3.  Viewing commands (Brandon)](#viewing-command-type)
-	 * [4.3.1. Locating a cheatsheet by name: `/find`](#find-command)
-	 * [4.3.2. Viewing the cheatsheet: `/view`](#view-command)
-	 * [4.3.3. Listing all cheatsheets: `/list`](#list-command)
+	 * [4.3.1. Locating a cheat sheet by name: `/find`](#find-command)
+	 * [4.3.2. Viewing the cheat sheet: `/view`](#view-command)
+	 * [4.3.3. Listing all cheat sheets: `/list`](#list-command)
   * [4.4.  General commands (Adhy)](#general-command-type)
 	 * [4.4.1. Viewing help: `/help`](#help-command)
 	 * [4.4.2. Change program settings: `/set`](#settings-command)
@@ -61,7 +61,7 @@ The table of contents below lets you easily access the documentation for install
   * [5.2. Data file organization](#data-file-organization)
   * [5.3. Preloaded data files](#preloaded-data-files)  	     	    	  	    
 * [6. FAQ](#faq)
-* [7. Command Cheatsheet](#command-cheatsheet)
+* [7. Command Cheat sheet](#command-cheatsheet)
 
 <br>
 
@@ -427,38 +427,38 @@ ___
 <a id="viewing-command-type"></a>
 ## 4.3. Viewing Commands: <font size="5"> [:arrow_up_small:](#table-of-contents)</font>
 
-These are commands that allow you to lookup **the List** for the cheatsheets you want quickly. It is recommended to use one command after another,
-e.g. using `/find` to list all matching cheat lists then `/view` with the corresponding name to view the cheatsheet.
+These are commands that allow you to lookup **the List** for the cheat sheets you want quickly. It is recommended to use one command after another,
+e.g. using `/find` to list all matching cheat lists then `/view` with the corresponding name to view the cheat sheet.
 
 Some of these commands present their results in a table form and allow you to sort the results through various filters provided. We will call this ****Sorting Mode****.
 
-In **Sorting Mode**, cheatsheets are originally shown in the order they were found inside the List. You can then sort them in [lexicographical order](https://en.wikipedia.org/wiki/Lexicographic_order#:~:text=In%20mathematics%2C%20the%20lexicographic%20or,of%20a%20totally%20ordered%20set.) 
-according to any of the cheatsheet properties. For example, sorting by descending name means to enter`3`in this mode and an illustration of expected output is shown below. 
+In **Sorting Mode**, cheat sheets are originally shown in the order they were found inside the List. You can then sort them in [lexicographical order](https://en.wikipedia.org/wiki/Lexicographic_order#:~:text=In%20mathematics%2C%20the%20lexicographic%20or,of%20a%20totally%20ordered%20set.) 
+according to any of the cheat sheet properties. For example, sorting by descending name means to enter`3`in this mode and an illustration of expected output is shown below. 
 
 > :bulb: To exit **Sorting Mode**, enter any characters other than 1 - 4.
 
 ![image](https://i.ibb.co/jJZPNdM/image.png)
 
-> :bulb:  Viewing/Deleting cheatsheets using index
-> * Index of cheatsheets after sorting in `/list` command can be used to delete/view corresponding cheatsheets
-> * However, index of cheatsheets in `/find` command cannot be used to delete/view cheatsheets. You would have to delete/view them using the name.
+> :bulb:  Viewing/Deleting cheat sheets using index
+> * Index of cheat sheets after sorting in `/list` command can be used to delete/view corresponding cheat sheets
+> * However, index of cheat sheets in `/find` command cannot be used to delete/view cheat sheets. You would have to delete/view them using the name.
 
 ---
 
 <a id="find-command"></a>
-### 4.3.1. Locating cheatsheets with pattern : `/find`<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+### 4.3.1. Locating cheat sheets with pattern : `/find`<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 
 
 >Format: `/find /s <SUBJECT> /k <KEYWORD>` <br>
 >Flag optionality: [`/s`, `/k`] (At least one)
 
-`/find` command allows you to search for cheatsheets using `SUBJECT` and/or `KEYWORD`. The matching cheatsheets would be displayed in a table.
+`/find` command allows you to search for cheat sheets using `SUBJECT` and/or `KEYWORD`. The matching cheat sheets would be displayed in a table.
 
-After getting prompted to enter a command, you can search for cheatsheets using:
+After getting prompted to enter a command, you can search for cheat sheets using:
 
-1. `/find /s <SUBJECT>` to search for cheatsheets with matching subject. More details on the matching algorithm at the end of this section.
-2. `/find /k <KEYWORD>` to search for cheatsheets with contents that contains `KEYWORD`.
-3. `/find /s <SUBJECT> /k <KEYWORD>` to search for cheatsheets with matching subject and contains `KEYWORD`.
+1. `/find /s <SUBJECT>` to search for cheat sheets with matching subject. More details on the matching algorithm at the end of this section.
+2. `/find /k <KEYWORD>` to search for cheat sheets with contents that contains `KEYWORD`.
+3. `/find /s <SUBJECT> /k <KEYWORD>` to search for cheat sheets with matching subject and contains `KEYWORD`.
 
 | `/find /s <SUBJECT>` |
 | :-------------------------: |
@@ -472,7 +472,7 @@ After getting prompted to enter a command, you can search for cheatsheets using:
 | :-------------------------: |
 | ![image](https://i.ibb.co/fGdPMdC/image.png) |
 
-Cheatsheets that meet the criteria of the command you entered would be displayed in a table as shown in the images below.
+cheat sheets that meet the criteria of the command you entered would be displayed in a table as shown in the images below.
 
 | `/find /s <SUBJECT>` |
 | :-------------------------: |
@@ -508,7 +508,7 @@ To exit **Sorting Mode** and simply enter another character (excluding 1-4).
 
 ![image](https://i.ibb.co/x8NVsPr/image.png)
 
-However, if none of the cheatsheets meets the criteria of your `/find` command, CheatLogs will not enter **Sorting Mode** as shown in the image below.
+However, if none of the cheat sheets meets the criteria of your `/find` command, CheatLogs will not enter **Sorting Mode** as shown in the image below.
 
 ![image](https://i.ibb.co/wcqcFxR/image.png)
 
@@ -524,18 +524,18 @@ Examples:
  ---
  
 <a id="view-command"></a>
-### 4.3.2. Viewing a specific cheatsheet: `/view`<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+### 4.3.2. Viewing a specific cheat sheet: `/view`<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 >Format: `/view /n CHEATSHEET_NAME /i CHEATSHEET_INDEX` <br>
 >Flag optionality: [`/n`, `/i`] (At least one)
 
-You can view the details of a specific cheatsheet using the `/view` command.
-The `view` command requires you to enter either a name or index, and CheatLogs will display the content of the cheatsheet that matches what you entered.
+You can view the details of a specific cheat sheet using the `/view` command.
+The `view` command requires you to enter either a name or index, and CheatLogs will display the content of the cheat sheet that matches what you entered.
 
-After getting prompted to enter a command, you can view a specific cheatsheet using:
+After getting prompted to enter a command, you can view a specific cheat sheet using:
 
-1. `/view /n <CHEATSHEET_NAME>` to view the cheatsheet with name `CHEATSHEET_NAME`
-2. `/view /i <CHEATSHEET_INDEX>` to view the cheatsheet with index `CHEATSHEET_INDEX`
-3. `/view /n <CHEATSHEET_NAME> /i <CHEATSHEET_INDEX>` to view the cheatsheet with name and index corresponding to `CHEATSHEET_NAME` and `CHEATSHEET_INDEX`. 
+1. `/view /n <CHEATSHEET_NAME>` to view the cheat sheet with name `CHEATSHEET_NAME`
+2. `/view /i <CHEATSHEET_INDEX>` to view the cheat sheet with index `CHEATSHEET_INDEX`
+3. `/view /n <CHEATSHEET_NAME> /i <CHEATSHEET_INDEX>` to view the cheat sheet with name and index corresponding to `CHEATSHEET_NAME` and `CHEATSHEET_INDEX`. 
 >:exclamation: If `CHEATSHEET_NAME` and `CHEATSHEET_INDEX` are pointing at two different cheat sheets, no cheatsheet content will be displayed.
 
 | `/view /n <CHEATSHEET_NAME>`|
@@ -564,9 +564,9 @@ Examples:
 
 You can use the `/list` command with no additional flags to list all the cheatsheets in **the List** in a table.
 
-After getting prompted to enter a command, you can view a specific cheatsheet using:
+After getting prompted to enter a command, you can view a specific cheat sheet using:
 
-* `/list` to list all cheatsheets available.
+* `/list` to list all cheat sheets available.
 
 ![image](https://i.ibb.co/zF8F4PM/image.png)
 
