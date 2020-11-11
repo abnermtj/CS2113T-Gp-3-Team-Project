@@ -339,25 +339,6 @@ Example:
 > The preloaded cheat sheet will still appear inside  **the List** .
 ___
 
-
-<a id="clear-command"></a>
-### 4.1.3. Clearing all entries: `/clear`<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
->Format: `/clear`
->
-If you want to reset everything to its original state, you can use the `/clear` command instead of using `/delete` multiple times.
-This command will delete all cheat sheets from **the List** on your **CheatLogs**. No need to worry, `/clear` command will not remove the preloaded cheat sheets.
-Here is the expected result if currently you have two cheat sheets stored in the application.
-
-![image](https://i.ibb.co/ysXp9DY/clearcommand.png)
-
-Example:
-* `/clear`
-
-> :exclamation: The clear function only clears for the user made cheat sheets. <br>
-> The preloaded cheat sheet will still appear inside  **the List** .
-___
-
-
 <a id="manipulation-command-type"></a>
 ## 4.2. Manipulation Commands:  <font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 After adding cheat sheets, you may want to edit them after some time. Manipulation commands allow you to modify the content of a specific cheat sheet in  **the List** .
