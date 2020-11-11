@@ -1,4 +1,5 @@
 <h1 align="center">  CheatLogs User Guide </h1>
+
 ![Our Logo](https://i.ibb.co/VxzKbbz/a1.png)
 
 CheatLogs is a free and open-source cheat sheet manager with blazing fast organization, editing and searching via both a command-line interface (CLI) and a graphical user interface (GUI).
