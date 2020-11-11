@@ -667,135 +667,128 @@ If you are done using CheatLogs, simple type `/exit` to close the application. C
 <a id="data-storage"></a>
 # 5. Data storage<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 
-CheatLogs provides a robust storage system that works together with certain
-commands to store your cheatsheets for future reference. This ensures that you
-have a directory of cheatsheet files which are organized and can be utilized
-by CheatLogs anytime. Refer to the image below for an example of a cheatsheet
-file.
+**CheatLogs** provides a robust storage system that works together with certain
+commands to store your cheat sheets for future reference. This ensures that you
+have a directory of organized cheat sheet files that **CheatLogs** can read anytime. 
+
+Refer to the image below for an example of a cheat sheet file.
 
 ![image](https://i.ibb.co/RDjGFYZ/xml-File-Example.png)
 
 <br>
 
 <a id="data-file-contents"></a>
-## 5.1. Data file contents<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+## 5.1. Data file contents<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
 
-Each cheatsheet file uses an XML file format. This file format organizes the contents
-of the file into different sections based on certain attributes of the cheatsheet. The code
-snippet below illustrates the structure of the entire cheatsheet file.
+Each cheat sheet file uses an [XML](https://www.w3schools.com/xml/xml_whatis.asp) file format. This file format organizes the contents
+of the file into different sections based on certain attributes of the cheat sheet. The code
+snippet below illustrates the structure of the entire cheat sheet file.
 
 ![image](https://i.ibb.co/mFJ1nDy/xml-Format.png)
 
-> :exclamation: Editing XML files can render CheatLogs incapable of reading your cheatsheets. You should only change
->or add such files if you an advanced user of CheatLogs.
+By following this format, you can manually insert cheat sheet files recognized by **CheatLogs**. The following sections will guide you in
+writing XML files that **CheatLogs** can convert to cheatsheets.
 
-By following this format, you can manually insert cheatsheet files that are recognized by CheatLogs. The following sections
-explore each segment of this format.
+> :exclamation: Editing XML files can render **CheatLogs** incapable of reading your cheat sheets. You should only modify
+>or add such files if you an advanced user of **CheatLogs**.
 
-> :bulb:  If you are unsure where to place your new files, simply place it in the /data directory. CheatLogs will organize them when you execute a command to add, edit, or delete any file.
+> :bulb:  If you are unsure where to place your new files, simply place it in the /data directory. **CheatLogs** will organize them when you execute a command to add, edit or delete any file.
 
 ---
 
 <a id="xml-file-configurations"></a>
-### 5.1.1. XML file configurations<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+### 5.1.1. XML file configurations<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
 
-This section configures the settings of the XML file. By default, CheatLogs writes this line into
-XML files that it creates or modifies.
+This section configures the settings of the XML file. By default, **CheatLogs** writes this line into both new and existing XML files.
 
 >Format: `<?xml version="1.0" encoding="UTF-8" standalone="no"?>` 
 
-> :bulb: If you are creating a new XML file, you can choose to omit this line entirely. CheatLogs will still convert such XML files into cheatsheets.
+> :bulb: If you are creating a new XML file, you can omit this line entirely. **CheatLogs** will still convert such XML files into cheat sheets.
 
-> :exclamation: If you are including this section, you should use the exact settings defined by the format above. Any change to this format can result in CheatLogs not converting such files into cheatsheets.
+> :exclamation: If you are including this section, use the exact settings defined by the format above. Any change to this format can cause **CheatLogs** not converting such files into cheat sheets.
 
 ---
 
 <a id="main"></a>
 ### 5.1.2. Main<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 
-This section acts as the root element of the document. CheatLogs analyses the relevant
+This section acts as the root element of the document. **CheatLogs** analyses the relevant
 sections you place inside `main` and creates a cheat sheet based on the input given by them.
 
 >Format: `<main>CONTENTS</main>` 
 
-> :bulb:  You can rearrange the order of sections within CONTENTS. CheatLogs does not take the ordering of such sections into account when parsing XML files.
+> :bulb:  You can rearrange the order of sections within `CONTENTS`. **CheatLogs** does not take the ordering of such sections into account when parsing XML files.
 
-> :exclamation: Any section that you do not insert into CONTENTS will not be included in the cheatsheet.
+> :exclamation: Any section that you do not insert into `CONTENTS` is not included in the cheat sheet.
 
 ---
 
 <a id="favourite"></a>
-### 5.1.3. Favourite<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+### 5.1.3. Favourite<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
 
-This section indicates if the cheatsheet should be marked as [favourite](#favourite-command). You can use
-this to mark cheatsheets which you want to view in the list of your favourite cheatsheets.
+This section indicates if CheatLogs should mark the cheat sheet as [favourite](#favourite-command). 
+You can use this to mark cheat sheets which you want to view in your list of favourite cheat sheets.
 
 >Format: `<favourite>STATUS</favourite>`
 
-> :memo:  STATUS is not case-sensitive. For example, `YES` and `yes` are considered the same.
+> :memo:  `STATUS` is not case-sensitive. For example, `YES` and `yes` are the same.
 
-> :exclamation: If STATUS contains another word than `YES`, the cheatsheet will not be marked as a favourite. 
+> :exclamation: If `STATUS` contains another word than `YES`, the cheat sheet will not be marked as a favourite. 
 
 ---
 
 <a id="subject"></a>
-### 5.1.4. Subject<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+### 5.1.4. Subject<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
 
-This section includes the subject of the cheatsheet. It allows CheatLogs to organize your cheat
-sheet files by assigning cheatsheets of the same subject to the same folder.
+This section includes the subject of the cheat sheet. It allows **CheatLogs** to organize your cheat sheet 
+files by assigning cheat sheets of the same subject to the same folder.
 
->Format: `<subject>SUBJECT</subject>`
+> Format: `<subject>SUBJECT</subject>`
 
-> :exclamation: SUBJECT cannot take in special characters. You will
->  **not** be able to insert XML files with such subjects into CheatLogs.
+> :exclamation: `SUBJECT` cannot take in special characters. You will
+>  not be able to insert XML files with such names into **CheatLogs**.
 
 ---
 
 <a id="contents"></a>
-### 5.1.5. Contents<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
 
-This section includes the contents of the cheatsheet. You can type the notes that you want to see in your cheatsheet
+### 5.1.5. Contents<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
+This section includes the contents of the cheat sheet. You can type the notes you want to see in your cheatsheet
 here.
 
 >Format: `<contents>CONTENTS</contents>`
 
-> :bulb:  You can append the contents on a separate line.
+> :bulb:  You can append `CONTENTS` on a separate line.
 
 <a id="data-file-organization"></a>
-## 5.2. Data organization<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+## 5.2. Data organization<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
+You can find all the data files in the */data* directory, which is in the same directory as
+*CheatLogs.jar*. Within */data*, **CheatLogs** stores data files in folders whose name matches its subject name. 
+This gives you a directory of cheat sheets organized by subject, which you can use to retrieve any external cheat sheet file. 
 
-All the data files can be found in the */data* directory, which is located in the same directory as
-CheatLogs.jar. Within */data*, CheatLogs stores data files in subdirectories whose name matches its subject name. This gives you a directory of cheatsheets organized by subject, which you can use
-to retrieve any external cheatsheet file. 
-
-The figure below shows a sample organization of the cheatsheet files in a user’s directory.
-
+The figure below shows a sample organization of the cheat sheet files in a user’s directory.
 
 ![image](https://i.ibb.co/zbppwZZ/sample-User-Data.png)
 
-In the example illustrated above, the user currently has cheatsheets which are of
-3 different subjects. Even though some cheatsheets have the same name such as
-arrays.xml, they are categorized into different folders as they do not share the same
-subject name. This allows you to create cheat sheets for common concepts which may differ
-based on the subject you are taking.
+In the example illustrated above, the user currently has created cheat sheets  of
+3 different subjects. Having cheat sheets that are stored based on subject allows you
+to conveniently retrieve notes for the programming language that you are seeking help in.
 
 <a id="preloaded-data-files"></a>
-## 5.3. Preloaded data files<font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+## 5.3. Preloaded data files<font size="5"> [:arrow_up_small:](#table-of-contents)</font>
+*CheatLogs.jar* contains some example cheat sheet files. They are transferred over to the */data* directory when you run the application for the first time. To differentiate these files from your 
+personally created cheat sheets, they are placed under the */preloaded* subdirectory. By viewing and
+editing these cheat sheets through **CheatLogs**, you will understand how to operate this program.
 
-CheatLogs.jar contains some example cheatsheet files. These files will be moved over to the */data* directory when you run the application for the first time. To differentiate these files from the cheat sheets you created, the preloaded cheat sheets are placed under the */preloaded* subdirectory. By viewing and
-
-editing these cheatsheets through CheatLogs, you will understand how to operate this program.
-
-The figure below shows a sample organization of the cheatsheet files in a user’s directory with
-two preloaded cheat cheatsheets included.
+The figure below shows a sample organization of the cheat sheet files in a user’s directory with
+two preloaded cheat sheets included.
 
 ![image](https://i.ibb.co/bzp4yJ2/preloaded-Illustration.png)
 
-In the example above, you can see that CheatLogs keeps the organization of such preloaded cheatsheets separate
-from the other cheatsheet files. This is to help you to better identify files marked as
-preloaded within the */data* directory.
+In the example above, you can see that **CheatLogs** keeps the organization of such preloaded cheat sheets separate
+from the other cheat sheet files. This is to help you better identify preloaded files within the */data* directory.
 
-> :exclamation: If you create a new file within any subdirectory of */preloaded*, CheatLogs will assume that these files have been preloaded and will treat them as such.
+> :exclamation: If you create a new file within any subdirectory of */preloaded*, **CheatLogs** will assume that these files are preloaded and will treat them as such.
 
 <br>
 
@@ -804,7 +797,7 @@ preloaded within the */data* directory.
 **Q**: How do I transfer my data to another computer? <br>
 **A**: You can simply drag and drop the `cheatlogs.jar`  and the `/data` directory in that same folder into the other computer.
 
-**Q**: Why is CheatLogs so strict on formatting!?<br>
+**Q**: Why is CheatLogs so strict on formatting?<br>
 **A**: CheatLogs is still under development but we plan to provide better ways for you to input ways in the future.
 
 **Q**: Will future updates break my current cheatsheets?<br>
