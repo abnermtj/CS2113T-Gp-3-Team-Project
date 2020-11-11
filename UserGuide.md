@@ -644,12 +644,12 @@ snippet below illustrates the structure of the entire cheat sheet file.
 
 ![image](https://i.ibb.co/mFJ1nDy/xml-Format.png)
 
-> :exclamation: Editing XML files can render **CheatLogs** incapable of reading your cheat sheets. You should only change
->or add such files if you an advanced user of **CheatLogs**.
 
-By following this format, you can manually insert cheat sheet files recognized by **CheatLogs**. The following sections
-explore each segment of this format. Understanding the various sections will allow you to write XML files that CheatLogs
-can read.
+By following this format, you can manually insert cheat sheet files recognized by **CheatLogs**. The following sections will guide you in
+writing XML files that **CheatLogs** can convert to cheatsheets.
+
+> :exclamation: Editing XML files can render **CheatLogs** incapable of reading your cheat sheets. You should only modify
+>or add such files if you an advanced user of **CheatLogs**.
 
 > :bulb:  If you are unsure where to place your new files, simply place it in the /data directory. **CheatLogs** will organize them when you execute a command to add, edit or delete any file.
 
