@@ -705,7 +705,7 @@ sheet files by assigning cheat sheets of the same subject to the same folder.
 >Format: `<subject>SUBJECT</subject>`
 
 > :exclamation: `SUBJECT` cannot take in special characters. You will
->  **not** be able to insert XML files with invalid subject names into **CheatLogs**.
+>  not be able to insert XML files with such names into **CheatLogs**.
 
 ---
 
