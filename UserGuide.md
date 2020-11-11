@@ -365,18 +365,17 @@ After adding cheatsheets, you may want to edit them after some time. Manipulatio
 ___
 
 <a id="edit-command"></a>
-### 4.2.1. Editing a cheatsheet: `/edit` <font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+### 4.2.1. Editing a cheat sheet: /edit <font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+>Format: /edit /n CHEATSHEET_NAME /i CHEATSHEET_INDEX <br>
+>Flag optionality: [/n, /i] (At least one)
 
->Format: `/edit /n CHEATSHEET_NAME /i CHEATSHEET_INDEX` <br>
->Flag optionality: [`/n`, `/i`] (At least one)
-
-Edits the description of an existing cheatsheet. After `/edit`  is called, CheatLogs will match for a single cheatsheet in **the List** with a name matching `CHEATSHEET_NAME` or index matching `CHEATSHEET_INDEX` whichever you included (it will try to match only the name if you included both). 
-
-On a match, **the Editor** will pop up for you to edit the description of the matched cheatsheet. After you are done editing, saving or cancelling **the Editor** updates the cheatsheet details and the message below will be printed on the terminal, showing the updated version of the cheatsheet.
+This command allows you to edit the description of one of your existing cheat sheets. After `/edit`  is called, **CheatLogs** will match for a single cheat sheet in **the List** with a name matching `CHEATSHEET_NAME` or index matching `CHEATSHEET_INDEX` whichever you included (it will try to match only the name if you included both).
+ 
+On a match, **the Editor** will pop up for you to edit the description of the matched cheat sheet. After you are done editing, saving or cancelling **the Editor** updates the cheat sheet details and the message below will be printed on the terminal, showing the updated version of the cheat sheet.
 
 ![image](https://i.ibb.co/c8xq2wY/image.png)
 
-When either the name or index does not match, **the Editor** does not pop up and CheatLogs will specify an error as shown below.
+When either the name or index does not match, **the Editor** does not pop up and **CheatLogs** will specify an error as shown below.
 
 ![image](https://i.ibb.co/rZ6Rhgn/image.png)
 
@@ -386,39 +385,43 @@ When either the name or index does not match, **the Editor** does not pop up and
 
 Examples:
 * `/edit /n switch /i 2`
-* `/edit /i 3` 
+* `/edit /i 3`
 * `/edit /n commands`
 
 ____
 
+
 <a id="favourite-command"></a>
-### 4.2.2. Favouriting a cheatsheet: `/fav` <font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+### 4.2.2. Favouriting a cheat sheet: /fav <font size="5"> [:arrow_up_small:](#table-of-contents)</font> 
+>Format: /fav /n CHEATSHEET_NAME /i CHEATSHEET_INDEX /d  <br>
+>Flag optionality: [/n, /i] (At least one), /d (optional)
 
->Format: `/fav /n CHEATSHEET_NAME /i CHEATSHEET_INDEX /d`  <br>
->Flag optionality: [`/n`, `/i`] (At least one), `/d`(optional)
-
-If you have some cheatsheets which are used frequently, you can mark them as favourite so that those cheatsheets will always be displayed on the top of the table when using `/list`. The command `/fav` marks the cheatsheet with a name matching `CHEATSHEET_NAME` or index matching `CHEATSHEET_INDEX` whichever you included.  The expected result is similar to below if a matching cheatsheet is found.
+If you have some cheat sheets which are used frequently, you can mark them as favourite so that those cheat sheets will always be displayed on the top of the table when using `/list` and `/find`. The command `/fav` marks the cheat sheet with a name matching `CHEATSHEET_NAME` or index matching `CHEATSHEET_INDEX `whichever you included.  The expected result is similar to below if a matching cheat sheet is found.
+> :exclamation: Trying to match both name and index in the same command may result in conflicting matches. We recommend searching for a single one. 
 
 ![image](https://i.ibb.co/VW5JZNx/image.png)
 
-When either the name or index does not match, **Cheatlogs** will specify the error as shown below.
+When either the name or index does not match, **CheatLogs** will specify the error as shown below.
 
 ![image](https://i.ibb.co/vPgbnbW/image.png)
 
-Favourited cheatsheets are shown at the top of the `/list` command table, with a `[*]` beside its name. This is shown below, to the right of `loops`.  This allows you to identify and access your favourite cheatsheets easily. 
+Favourited cheat sheets are shown at the top of the `/list` command table, with a [*] beside its name. This is shown below, to the right of loops.  This allows you to identify and access your favourite cheat sheets easily. 
 
 ![image](https://i.ibb.co/XWztfyX/image.png)
 
-To unfavourite a cheatsheet, you can use the flag   `/d`  in the command e.g. `/fav /n string /d`. It will try to match for a cheatsheet the same way as a regular `fav` (without `/d`) but unfavourites the matched cheatsheet instead. This cheat sheet is printed as shown below.
+To unfavourite a cheat sheet, you can use the flag `/d` in the command e.g. `/fav /n string /d`. It will try to match for a cheat sheet the same way as a regular `/fav` (without `/d`) but unfavourites the matched cheat sheet instead. The matched cheat sheet is printed as shown below.
+
 ![image](https://i.ibb.co/F6MpX1m/image.png)
 
-Trying to [un]favourite an already [un]favourited cheatsheet will show an error and the matched cheatsheet. This is as shown below. 
+Trying to [un]favourite an already [un]favourited cheat sheet will show you an error and the matched cheat sheet. This is as shown below. 
+
 ![image](https://i.ibb.co/XWgygYK/image.png)
+
 ![image](https://i.ibb.co/cNHZmc6/image.png)
 
 Examples:
 * `/fav /n Integer /i 2`
-* `/fav /i 1` 
+* `/fav /i 1`
 * `/fav /n string`
 * `/fav /n string /d`
 
